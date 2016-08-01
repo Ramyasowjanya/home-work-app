@@ -2,7 +2,6 @@ from django.contrib.auth import logout
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from app.serializers import *
 
 # Create your views here.
 from django.contrib.auth.models import User
