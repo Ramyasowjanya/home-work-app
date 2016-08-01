@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <title>Menu item Deletion</title>
+
+</head>
+<body>
+<form action="" method="post">{% csrf_token %}
+<div class="col-sm-2 col-xs-12" id="lefttoc"></div>
+    <div class="col-sm-7 col-xs-12" id="maptoc">
+
+{#    </div>#}
+{#    <div class="col-sm-3 col-xs-12" id="righttoc">#}
+        <div class="row">
+            <div class="col-lg-10 col-md-11 col-sm-2 col-xs-12">
+    <div class="panel panel-warning ">
+        <div class="panel-heading">Confirm Deletion</div>
+    	<div class="panel-body ">
+    	   The Menu item will be deleted Proceed or No?<br>
+            <a href="http://127.0.0.1:8000/restaurants/list"><button class="btn btn-danger">Proceed</button></a>
+    	</div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+<br><br><br><br><br><br><br><br>
+<div class="btn-group">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://127.0.0.1:8000/restaurants/list/menu/"><button class="btn btn-info">Back</button></a>
+</div>
+</body>
+</html>

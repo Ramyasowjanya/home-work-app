@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <title>Menu form</title>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+
+		<ul class="nav navbar-nav navbar-left">
+	            <li><a href="">Create/Update Menu Item</a></li>
+        </ul>
+	</div><!-- /.navbar-collapse -->
+</nav>
+<div align="center">
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+        <button>Create/Update</button>
+        </form>
+    </div>
+</body>
+</html>

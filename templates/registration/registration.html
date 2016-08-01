@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <title>Register</title>
+</head>
+<body>
+{% block content %}
+<div style="text-align: center">
+<nav class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">Registration</a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+
+
+
+	</div><!-- /.navbar-collapse -->
+</nav>
+    <br>
+  <form action="/createuser/" method="post">{% csrf_token %}
+    {{form.as_p}}
+  <input type="submit" value="Register" />
+  </form>
+<br>
+    <a href="http://127.0.0.1:8000/restaurants/lists/"><button >Back</button></a>
+    </div>
+
+{% endblock %}
+</body>
+</html>
