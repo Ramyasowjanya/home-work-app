@@ -20,6 +20,7 @@ class Menus(models.Model):
     name=models.CharField(max_length=40)
     cost=models.IntegerField()
     hotel=models.ForeignKey(Restaurant)
+    type=models.CharField(max_length=30)
 
     def __unicode__(self):
         return self.name
