@@ -26,7 +26,7 @@ SECRET_KEY = 'x62nuku-=#1d#^d=)botxhu53a*ox_a@^7)$fixh4ed&^=^5ae'
 DEBUG = True
 
 from django.core.urlresolvers import resolve,reverse_lazy
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ramya.pythonanywhere.com']
 LOGIN_URL=reverse_lazy('login')
 LOGIN_REDIRECT_URL='/restaurants/list/menu/'
 
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ramya$khaodb',
+        'NAME': 'ramya$khaodb1',
         'USER':'ramya',
         'PASSWORD':'sunkara29',
         'HOST': 'ramya.mysql.pythonanywhere-services.com',
