@@ -23,7 +23,7 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 
 		<ul class="nav navbar-nav navbar-right">
-	            <li><a href="http://127.0.0.1:8000/restaurants/list/">View Profile</a></li>
+	            <li><a href="http://127.0.0.1:8000/list/">View Profile</a></li>
                  <li><a href="http://127.0.0.1:8000/logout1/">Logout</a></li>
         </ul>
 	</div><!-- /.navbar-collapse -->
@@ -36,10 +36,10 @@
             <td>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ x.cost }}</td>
         <td><div class="btn-group">
 &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="http://127.0.0.1:8000/restaurants/list/menu/{{ x.id }}/edit/">
+            <a href="http://127.0.0.1:8000/list/menu/{{ x.id }}/edit/">
                 <button type="button" class="btn btn-default">Update</button></a>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="http://127.0.0.1:8000/restaurants/list/menu/{{ x.id }}/delete/">
+            <a href="http://127.0.0.1:8000/list/menu/{{ x.id }}/delete/">
                 <button type="button" class="btn btn-default">Delete</button>
             </a>
         </div>
@@ -49,7 +49,7 @@
 </table>
 <br>
  <div class="btn-group">
-       <a href="http://127.0.0.1:8000/restaurants/list/menu/create/">
+       <a href="http://127.0.0.1:8000/list/menu/create/">
            <button type="button" class="btn btn-default">Add new menu item</button></a>
     </div>
 </div>
