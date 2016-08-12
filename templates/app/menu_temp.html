@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styling.css' %}">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <title>Menu list</title>
+</head>
+<body>
+<div id="wrapper">
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/restaurants/lists/{{hotel}}/menu/soup/">Soups</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/restaurants/lists/{{hotel}}/menu/starter/">Starter</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/restaurants/lists/{{hotel}}/menu/veg/">Veg</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/restaurants/lists/{{hotel}}/menu/rice/">Rice</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/restaurants/lists/{{hotel}}/menu/chicken/">Chicken</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/restaurants/lists/{{hotel}}/menu/sea/">Sea Food</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/restaurants/lists/{{hotel}}/menu/icecream/">Icecreams</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                         <ul class="list-group">
+            {% for x in menus_list %}
+			    	<li class="list-group-item">{{ x.name }} -  {{ x.cost }}</li>
+            {% endfor %}
+         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+<div class="btn-group " >
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://127.0.0.1:8000/restaurants/lists/{{ hotel }}/menu/order"><button type="button" class="btn btn-default ">Order</button></a>
+    </div>
+</body>
+</html>
