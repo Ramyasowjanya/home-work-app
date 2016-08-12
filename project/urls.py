@@ -20,8 +20,8 @@ from django.views.generic import TemplateView
 from app.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('^',include('django.contrib.auth.urls')),
-    url(r'^restaurants/',include('app.urls')),
+    url('^user/',include('django.contrib.auth.urls')),
+    url(r'^',include('app.urls')),
     url(r'^logout1/$',logout1,name="logout"),
     url(r'^createuser/$',get_registrationform,name="registration"),
     url(r'^success/$',TemplateView.as_view(template_name="success.html"),name="success"),
